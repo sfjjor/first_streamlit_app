@@ -27,7 +27,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 # Assign the response of Fruityvice to a dataframe 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Add dataframe to streamlit
